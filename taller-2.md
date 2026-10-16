@@ -211,16 +211,16 @@ Gracias a esta arquitectura, los desarrolladores podían construir interfaces me
 
 Este caso demuestra que React puede adaptarse a diferentes entornos de ejecución y que la optimización del código es importante para ofrecer una buena experiencia de usuario.
 
-**Fuente:**
+* **Fuente:**
 
-- Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b).
+    * Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b).
 
-2. Airbnb
-¿En qué producto o sección lo usan?
+### 2. Airbnb
+**¿En qué producto o sección lo usan?**
 
 Airbnb ha compartido experiencias técnicas relacionadas con la arquitectura frontend de su plataforma web y el desarrollo de interfaces mediante componentes reutilizables.
 
-¿Por qué es un caso relevante?
+**¿Por qué es un caso relevante?**
 
 Una plataforma de alojamiento y viajes necesita mantener una experiencia coherente en diferentes secciones, como las búsquedas de propiedades, las fichas de alojamientos y los procesos de reserva. A medida que una aplicación crece, organizar el código y facilitar la colaboración entre desarrolladores se vuelve cada vez más importante.
 
