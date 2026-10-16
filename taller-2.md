@@ -199,37 +199,39 @@ Porque si buscas empleo de front-end en portales de trabajo (LinkedIn, Get on Bo
 
 **¿En qué producto o sección lo usan?**
 
-Netflix ha documentado el uso de React en el desarrollo de interfaces para televisores inteligentes (*Smart TVs*) y otros dispositivos de reproducción multimedia. Uno de los casos más conocidos es la creación de una interfaz optimizada para equipos con recursos de hardware limitados.
+Netflix ha documentado el uso de React en el desarrollo de la interfaz de usuario de su aplicación para televisores inteligentes (*Smart TVs*) y otros dispositivos de reproducción multimedia.
 
 **¿Por qué es un caso relevante?**
 
-Los televisores inteligentes pueden tener menos capacidad de procesamiento y memoria que un computador convencional. Por eso, desarrollar interfaces que respondan rápidamente y permitan navegar de forma fluida representa un desafío para los equipos de ingeniería.
+Los televisores inteligentes pueden tener menos capacidad de procesamiento y memoria que un computador convencional. Por esta razón, desarrollar interfaces rápidas y fluidas representa un desafío para los equipos de ingeniería.
 
-En un artículo técnico publicado en 2017, Netflix explicó cómo desarrolló una solución basada en React llamada **React-Gibbon**. Esta implementación utilizaba Gibbon, un motor gráfico propio, en lugar del DOM tradicional del navegador. Así, los desarrolladores podían construir la interfaz mediante componentes declarativos de React y utilizar un sistema de representación adaptado a las características de los dispositivos de televisión.
+En un artículo técnico publicado en enero de 2017, Netflix explicó cómo desarrolló una solución llamada **React-Gibbon**. Esta implementación adaptaba React a Gibbon, un motor gráfico utilizado por Netflix para representar su interfaz en dispositivos de televisión, en lugar de depender del DOM tradicional del navegador.
 
-Este caso demuestra que React permite organizar interfaces mediante componentes reutilizables y que su arquitectura puede adaptarse a entornos diferentes del navegador web tradicional.
+Gracias a esta arquitectura, los desarrolladores podían construir interfaces mediante componentes declarativos de React y aplicar optimizaciones para mejorar el rendimiento en dispositivos con recursos limitados.
+
+Este caso demuestra que React puede adaptarse a diferentes entornos de ejecución y que la optimización del código es importante para ofrecer una buena experiencia de usuario.
 
 **Fuente:**
 
-- Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://netflixtechblog.com/crafting-a-high-performance-tv-user-interface-using-react-3350e5a65f3b).
+- Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b).
 
 ### 2. Airbnb
 
 **¿En qué producto o sección lo usan?**
 
-Airbnb ha documentado una reestructuración de su arquitectura frontend basada en tecnologías de JavaScript y React para desarrollar y mantener partes de su plataforma web. Su experiencia constituye un ejemplo de cómo organizar aplicaciones con interfaces complejas mediante componentes reutilizables.
+Airbnb ha compartido experiencias técnicas relacionadas con la arquitectura frontend de su plataforma web y el desarrollo de interfaces mediante componentes reutilizables.
 
 **¿Por qué es un caso relevante?**
 
-Una plataforma de alojamiento y viajes necesita ofrecer una experiencia coherente en diferentes secciones, como las búsquedas de propiedades, las fichas de alojamientos y los procesos de reserva. A medida que una aplicación crece, mantener el código organizado y facilitar la colaboración entre desarrolladores se vuelve cada vez más importante.
+Una plataforma de alojamiento y viajes necesita mantener una experiencia coherente en diferentes secciones, como las búsquedas de propiedades, las fichas de alojamientos y los procesos de reserva. A medida que una aplicación crece, organizar el código y facilitar la colaboración entre desarrolladores se vuelve cada vez más importante.
 
-El uso de React permite dividir la interfaz en componentes independientes que pueden reutilizarse y actualizarse con mayor facilidad. Airbnb también ha compartido con la comunidad herramientas y convenciones para mejorar la calidad del código, como su guía de estilo de JavaScript y sus recomendaciones específicas para React y JSX.
+React permite dividir una interfaz en componentes independientes que pueden reutilizarse y mantenerse con mayor facilidad. Airbnb también ha compartido herramientas y convenciones de programación con la comunidad, entre ellas su guía de estilo de JavaScript y sus recomendaciones para React y JSX.
 
-Este caso es relevante porque muestra que el desarrollo de aplicaciones web de gran tamaño no depende únicamente de una biblioteca, sino también de una arquitectura organizada, componentes reutilizables y buenas prácticas de programación.
+Este caso permite comprender cómo los componentes reutilizables y las buenas prácticas de programación ayudan a organizar aplicaciones web complejas.
 
 **Fuentes:**
 
-- Airbnb Engineering. [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2).
+- Airbnb Engineering. [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5c213d25edb5).
 - Airbnb. [JavaScript Style Guide](https://github.com/airbnb/javascript).
 - Airbnb. [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
@@ -237,20 +239,20 @@ Este caso es relevante porque muestra que el desarrollo de aplicaciones web de g
 
 ## Fuentes bibliográficas
 
-1. **React. Documentación oficial.** [Describing the UI](https://react.dev/learn/describing-the-ui). Consultada para estudiar qué es React, cómo se crean los componentes, cómo se utiliza JSX y cómo se pasan propiedades (*props*).
+1. **React. Documentación oficial.** [Describing the UI](https://react.dev/learn/describing-the-ui). Consultada para estudiar los componentes, JSX y la organización de las interfaces.
 
-2. **React. Documentación oficial.** [State: A Component's Memory](https://react.dev/learn/state-a-components-memory). Consultada para comprender el estado de los componentes, el funcionamiento de `useState` y la actualización de las interfaces.
+2. **React. Documentación oficial.** [State: A Component's Memory](https://react.dev/learn/state-a-components-memory). Consultada para comprender el estado de los componentes y el funcionamiento de `useState`.
 
 3. **React. Equipo de desarrollo.** [React Team](https://react.dev/community/team). Consultada para conocer el equipo y la comunidad que participan en el desarrollo y mantenimiento de React.
 
-4. **Netflix Technology Blog.** [Crafting a high-performance TV user interface using React](https://netflixtechblog.com/crafting-a-high-performance-tv-user-interface-using-react-3350e5a65f3b). Fuente técnica sobre React-Gibbon y la optimización de interfaces para dispositivos de televisión.
+4. **Netflix Technology Blog.** [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b). Fuente técnica sobre React-Gibbon y la optimización de interfaces para dispositivos de televisión.
 
-5. **Airbnb Engineering.** [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2). Consultada para conocer la evolución de la arquitectura frontend de Airbnb y las decisiones técnicas relacionadas con su plataforma web.
+5. **Airbnb Engineering.** [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5c213d25edb5). Fuente relacionada con la evolución de la arquitectura frontend de Airbnb.
 
 6. **Airbnb.** [JavaScript Style Guide](https://github.com/airbnb/javascript). Recurso sobre convenciones y buenas prácticas para escribir código JavaScript.
 
-7. **Airbnb.** [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react). Recurso con recomendaciones de estilo y organización para desarrollar componentes React y utilizar JSX.
+7. **Airbnb.** [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react). Recurso con recomendaciones de estilo para desarrollar componentes React y utilizar JSX.
 
 8. **Wikipedia.** [React](https://es.wikipedia.org/wiki/React). Fuente complementaria para contextualizar la historia y las características generales de React.
 
-Las fuentes anteriores se utilizaron como apoyo para elaborar las explicaciones de este trabajo con palabras propias.
+Las fuentes se utilizaron como apoyo para elaborar las explicaciones de este trabajo con palabras propias.
