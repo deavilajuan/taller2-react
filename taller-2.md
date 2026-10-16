@@ -7,7 +7,7 @@
 ## Punto 1 · ¿Qué es React?
 ### ¿Qué es React y para qué sirve dentro del desarrollo web?
 React es una herramienta de JavaScript que se usa para armar la parte visual (la interfaz) de las páginas web. Básicamente, sirve para hacer páginas interactivas donde las cosas cambian en la pantalla sin necesidad de que la página se tenga que recargar entera a cada rato (lo que conocemos como SPA). La idea principal de React es que armas tu web dividiéndola en pedacitos o piezas sueltas (componentes) como botones, barras de navegación o tarjetas, y luego los juntas todos.
-![React en el desarrollo web](img/puntos/react-logo.png)
+![React en el desarrollo web](img/puntos/react-logo.svg)
 ### ¿Quién lo creó y en qué año apareció?
 Lo creó **Jordan Walke**, que era un programador de **Facebook** (hoy Meta). 
 * Primero lo crearon de forma interna en 2011 para solucionar problemas que tenían con el muro de noticias de Facebook.
@@ -29,7 +29,7 @@ Significa que tú solamente le dices a React **qué quieres que se vea** según 
 El problema de usar JavaScript puro (`document.getElementById`, `innerHTML`, `appendChild`) en páginas grandes era que se volvía un dolor de cabeza inmanejable:
 1. **El código se volvía un espagueti:** Si un dato cambiaba (por ejemplo, los productos del carrito de compras), te tocaba acordarte de cambiar el número en el ícono del carrito, actualizar el total a pagar y modificar la lista de productos manualmente. Si se te pasaba uno, la pantalla quedaba mostrando datos equivocados.
 2. **Era lento:** Cada vez que tocas el DOM a mano, el navegador gasta recursos recalculando el diseño y redibujando la pantalla. Si hacías muchos cambios seguidos, la página se sentía pesada o lagueada.
-![Esquema Imperativo vs Declarativo](img/esquemas/imperativo-vs-declarativo.png)
+![Esquema Imperativo vs Declarativo](img/esquemas/imperativo-vs-declarativo.svg)
 ### Explica la diferencia entre el enfoque imperativo y el enfoque declarativo
 * **Imperativo (El CÓMO):** Como cuando le das indicaciones de manejo a alguien: "avanza 2 cuadras, cruza a la derecha, frena, sube la ventana". Le dices cada pasito que tiene que hacer el navegador.
 * **Declarativo (El QUÉ):** Como pedir un taxi por aplicación: "llévame a la universidad". No le dices al conductor cómo meter los cambios ni por qué calle exacta meterse; tú solo pides el resultado y React se encarga de la ruta.
@@ -39,12 +39,12 @@ React lo soluciona usando algo llamado **Virtual DOM**:
 2. Cuando algún dato de tu página cambia, React dibuja una nueva copia en memoria con ese cambio.
 3. Compara la copia vieja con la nueva (un proceso que llaman *Diffing*).
 4. Se da cuenta de cuál fue la única cosita que cambió (por ejemplo, solo cambió un numerito) y va al navegador real a cambiar únicamente ese numerito, sin tener que recargar ni tocar el resto de la página.
-![Esquema del Virtual DOM y reconciliación](img/esquemas/virtual-dom.png)
+![Esquema del Virtual DOM y reconciliación](img/esquemas/virtual-dom.svg)
 ### ¿Qué rol juegan los componentes reutilizables en la solución de ese problema?
 Permiten no tener que repetir código una y otra vez. En vez de copiar y pegar el mismo bloque HTML de una tarjeta de producto 20 veces, creas un solo componente `<Tarjeta />` y lo usas las veces que quieras pasándole los datos de cada producto. Si mañana quieres cambiarle el color al botón de la tarjeta, lo cambias en un solo archivo y se arregla en toda la web automáticamente.
 
 ## Punto 3 · Principales componentes de React
-![Estructura general de componentes y Props](img/puntos/componentes.png)
+![Estructura general de componentes y Props](img/puntos/componentes.svg)
 ### 1. Componentes
 * **Definición:** Son como piezas de Lego de código. Básicamente son funciones normales de JavaScript que devuelven lo que se va a ver en la pantalla.
 * **Características:**
