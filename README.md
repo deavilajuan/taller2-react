@@ -15,7 +15,6 @@ taller2-react/
 ├── taller-2.md             
 └── img/                    
     ├── esquemas/           
-    │   ├── metodologia.svg 
     │   ├── virtual-dom.svg 
     │   └── imperativo-vs-declarativo.svg 
     └── puntos/             
