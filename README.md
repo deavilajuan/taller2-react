@@ -1,10 +1,9 @@
 # taller2-react
-#Segundo Corte: Investigación de React
-Repositorio con el desarrollo del **Taller 2 de Corte** sobre la teoría, funcionamiento y uso de **React** en la vida real.
+#Segundo Corte: **Taller 2 de Corte** sobre la teoría, funcionamiento y uso de **React** en la vida real.
 ---
 ## Datos generales
-* **Estudiante:** Juan F. De Avila Alfaro
-* **Materia:** Programación Web / Frontend
+* **Estudiante:** Juan Francisco De Avila Alfaro
+* **Materia:** Desarrollo Frontend
 * **Entrega:** Viernes 16 de octubre de 2026
 * **Archivo con las respuestas:** [`taller-2.md`](/taller-2.md)
 ---
