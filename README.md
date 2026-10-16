@@ -15,12 +15,12 @@ taller2-react/
 ├── taller-2.md             
 └── img/                    
     ├── esquemas/           
-    │   ├── metodologia.png 
-    │   ├── virtual-dom.png 
-    │   └── imperativo-vs-declarativo.png 
+    │   ├── metodologia.svg 
+    │   ├── virtual-dom.svg 
+    │   └── imperativo-vs-declarativo.svg 
     └── puntos/             
-        ├── react-logo.png  
-        ├── componentes.png 
-        ├── usestate.png    
-        ├── netflix-ui.png  
-        └── airbnb-ui.png   
+        ├── react-logo.svg  
+        ├── componentes.svg 
+        ├── usestate.svg    
+        ├── netflix-ui.svg  
+        └── airbnb-ui.svg   
