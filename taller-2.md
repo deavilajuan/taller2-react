@@ -42,7 +42,7 @@ React lo soluciona usando algo llamado **Virtual DOM**:
 ![Esquema del Virtual DOM y reconciliación](img/esquemas/virtual-dom.png)
 ### ¿Qué rol juegan los componentes reutilizables en la solución de ese problema?
 Permiten no tener que repetir código una y otra vez. En vez de copiar y pegar el mismo bloque HTML de una tarjeta de producto 20 veces, creas un solo componente `<Tarjeta />` y lo usas las veces que quieras pasándole los datos de cada producto. Si mañana quieres cambiarle el color al botón de la tarjeta, lo cambias en un solo archivo y se arregla en toda la web automáticamente.
----
+
 ## Punto 3 · Principales componentes de React
 ![Estructura general de componentes y Props](img/puntos/componentes.png)
 ### 1. Componentes
@@ -70,3 +70,142 @@ export default function App() {
     </div>
   );
 }
+```
+
+### 2. JSX
+* **Definición:** Es una forma de escribir código que mezcla HTML dentro de JavaScript. Hace que armar las pantallas sea mucho más cómodo y visual.
+* **Características:**
+    * Aunque parece HTML, no lo es. Por debajo se transforma en código JavaScript normal.
+    * Todo lo que devuelvas tiene que estar envuelto en una sola etiqueta padre (o usar etiquetas vacías <> </>).
+    * En vez de class se escribe className (porque class ya es una palabra reservada de JS).
+    * Si quieres meter variables o lógica de JavaScript dentro del diseño, solo las pones entre llaves {}.
+* **Ejemplo de código:**
+  
+```jsx
+export default function Saludo() {
+  const usuario = "Carlos";
+  const puntos = 150;
+  return (
+    <div className="tarjeta-puntos">
+      <h2>Hola, {usuario}</h2>
+      <p>Tus puntos acumulados son: {puntos * 2}</p>
+    </div>
+  );
+}
+```
+### 3. Props
+* **Definición:** Son datos o información que le mandas a un componente desde afuera (de un componente padre a uno hijo), muy parecido a cuando le pasas argumentos a una función.
+* **Características:**
+    * Van en una sola dirección: siempre viajan de padre a hijo.
+    * Son de solo lectura: el componente que las recibe no las puede modificar por su cuenta.
+    * Puedes pasar de todo: textos, números, objetos o funciones.
+* **Ejemplo de código:**
+```jsx
+function BotonAccion({ texto, color }) {
+  return (
+    <button style={{ backgroundColor: color, color: 'white', padding: '10px' }}>
+      {texto}
+    </button>
+  );
+}
+export default function BarraHerramientas() {
+  return (
+    <div>
+      <BotonAccion texto="Guardar" color="green" />
+      <BotonAccion texto="Eliminar" color="red" />
+    </div>
+  );
+}
+```
+
+### 4. Estado (useState)
+* **Definición:** Es la memoria propia que tiene un componente para acordarse de cosas que pueden cambiar mientras el usuario usa la página (como un texto escrito, un contador o si un menú está abierto o cerrado).
+* **Características:**
+    * Se usa la función useState().
+    * Te devuelve dos cosas en una lista: el valor de la variable y una función especial para cambiar ese valor.
+    * Cada vez que usas esa función para cambiar el dato, React se da cuenta y vuelve a pintar el componente con el nuevo valor.
+
+* **Ejemplo de código:**
+```jsx
+import { useState } from 'react';
+export default function ContadorMeGusta() {
+  // likes empieza en 0, y setLikes es la función para cambiarlo
+  const [likes, setLikes] = useState(0);
+  function darLike() {
+    setLikes(likes + 1);
+  }
+  return (
+    <div>
+      <p>Total de likes: {likes}</p>
+      <button onClick={darLike}>Dar Me Gusta 👍</button>
+    </div>
+  );
+}
+```
+### 5. Eventos (onClick, onChange)
+* **Definición:** Es la manera en que React se entera de las cosas que hace el usuario (hacer clics, teclear, enviar un formulario) y ejecuta una función de respuesta.
+* **Características:**
+    * Se escriben con mayúscula intermedia (camelCase): onClick, onChange, onSubmit.
+    * Tienes que pasarle la función sin ejecutar (sin poner los paréntesis ()), para que solo se dispare cuando el usuario haga la acción.
+Ejemplo de código:
+```jsx
+import { useState } from 'react';
+export default function EntradaTexto() {
+  const [mensaje, setMensaje] = useState('');
+  // Captura lo que el usuario va escribiendo
+  function alEscribir(e) {
+    setMensaje(e.target.value);
+  }
+  return (
+    <div>
+      <input 
+        type="text" 
+        placeholder="Escribe algo aquí..." 
+        onChange={alEscribir} 
+      />
+      <p>Estás escribiendo: {mensaje}</p>
+    </div>
+  );
+}
+```
+
+## Punto 4 · Importancia de React en la industria
+### ¿Por qué tantas empresas eligen React para sus productos web?
+A las empresas les gusta porque ahorra tiempo y plata. Al poder reutilizar componentes, los equipos de diseño y desarrollo crean "sistemas de diseño" que usan en varios productos a la vez. Además, como es tan conocido, cuando una empresa necesita contratar un desarrollador front-end es mucho más fácil encontrar a alguien que ya sepa React que buscar a alguien de tecnologías menos usadas.
+
+### ¿Qué aporta React al ecosistema de desarrollo?
+React cambió totalmente la forma de programar en la web y creó un ecosistema gigante alrededor:
+
+* Creó la base para frameworks más grandes como Next.js o Remix, que sirven para hacer páginas completas con buen posicionamiento en Google (SEO).
+* Con **React Native**, un programador web puede usar prácticamente lo mismo que aprendió en React para hacer aplicaciones móviles para Android y iPhone.
+* Hay miles de librerías hechas por la comunidad en `npm` listas para usar: cosas para formularios, tablas, animaciones o manejo de datos.
+
+### ¿Qué papel juegan su comunidad y su mantenimiento?
+Es clave porque React no es un proyecto abandonado. Lo mantiene activamente un equipo de ingenieros pagos dentro de **Meta** (Facebook), junto a ingenieros de empresas como Vercel y un montón de colaboradores libres. Además, la comunidad es inmensa: si tienes un error o duda rara, lo buscas en Google o foros y es casi seguro que a otra persona ya le pasó y está resuelto.
+
+### ¿Por qué es una habilidad relevante para un desarrollador front-end hoy en día?
+Porque si buscas empleo de front-end en portales de trabajo (LinkedIn, Get on Board, etc.), la gran mayoría de ofertas piden saber React como requisito principal o deseable. Además, aprender React te enseña a pensar la web en componentes y manejar datos de forma ordenada, lo que te hace mejor programador en general.
+
+
+
+## Punto 5 · Grandes empresas que utilizan React
+### 1. Netflix
+* **En qué producto o sección lo usan:**
+En su plataforma web de streaming y sobre todo en la interfaz de sus aplicaciones para televisores inteligentes (Smart TVs y consolas).
+* **Por qué es un caso relevante:**
+Los televisores inteligentes suelen tener procesadores lentos y poca memoria comparados con un computador o celular moderno. Netflix aprovechó React para rehacer su pantalla de inicio, logrando que el catálogo cargue mucho más rápido y que navegar entre películas no se sienta trabado en pantallas lentas.
+
+
+### 2. Airbnb
+* **En qué producto o sección lo usan:**
+En toda su plataforma web para buscar alojamientos, ver fotos, revisar el mapa y reservar viajes.
+* **Por qué es un caso relevante:**
+Airbnb fue de las primeras empresas en apostarle fuerte a React para crear un sistema de diseño unificado. Gracias a esto, sus botones, tarjetas de casas y calendarios se ven y funcionan exactamente igual en cualquier idioma y país. Además, crearon la famosa "Guía de estilo de JavaScript y React de Airbnb", que hoy en día es una de las guías de buenas prácticas más famosas y seguidas por programadores en todo el mundo.
+
+fuentes bibliogragicas:
+1. **Documentación oficial de React:** https://es.react.dev
+ y https://react.dev
+2. **Blog de ingeniería de Meta:** https://engineering.fb.com
+3. **Blog técnico de Netflix:** https://netflixtechblog.com
+4. **Blog de ingeniería de Airbnb:** https://medium.com/airbnb-engineering
+5. **Wikipedia en español:** Artículo "React (biblioteca informática)"
