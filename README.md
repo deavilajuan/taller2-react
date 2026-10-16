@@ -6,7 +6,7 @@ Repositorio con el desarrollo del **Taller 2 de Corte** sobre la teoría, funcio
 * **Estudiante:** Juan F. De Avila Alfaro
 * **Materia:** Programación Web / Frontend
 * **Entrega:** Viernes 16 de octubre de 2026
-* **Archivo con las respuestas:** [`taller-2.md`](./taller-2.md)
+* **Archivo con las respuestas:** [`taller-2.md`](/taller-2.md)
 ---
 ## Estructura del repositorio
 ```text
