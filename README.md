@@ -1,5 +1,5 @@
 # taller2-react
-#Segundo Corte: **Taller 2 de Corte** sobre la teoría, funcionamiento y uso de **React** en la vida real.
+#Segundo Corte: **Taller del 2do Corte** investigación de teoría, funcionamiento y uso de **React**.
 ---
 ## Datos generales
 * **Estudiante:** Juan Francisco De Avila Alfaro
