@@ -53,21 +53,23 @@ Permiten no tener que repetir código una y otra vez. En vez de copiar y pegar e
   * Se pueden anidar (meter componentes dentro de otros).
 * **Ejemplo de código:**
 ```jsx
-
+// 1. Declaración del componente Aviso
 function Aviso() {
   return (
     <div className="alerta">
-      <h4>¡Cuidado!</h4>
-      <p>No olvides guardar tus cambios antes de salir.</p>
+      <h4>Atención requerida</h4>
+      <p>Asegúrese de guardar las modificaciones antes de cerrar.</p>
     </div>
   );
 }
+// 2. Componente principal que integra a Aviso
 export default function App() {
   return (
-    <div>
-      <h1>Panel de usuario</h1>
+    <main>
+      <h1>Panel de Configuración</h1>
+      {/* Invocación del componente Aviso */}
       <Aviso />
-    </div>
+    </main>
   );
 }
 ```
@@ -82,13 +84,13 @@ export default function App() {
 * **Ejemplo de código:**
   
 ```jsx
-export default function Saludo() {
+export default function TarjetaUsuario() {
   const usuario = "Carlos";
   const puntos = 150;
   return (
     <div className="tarjeta-puntos">
-      <h2>Hola, {usuario}</h2>
-      <p>Tus puntos acumulados son: {puntos * 2}</p>
+      <h2>Bienvenido, {usuario}</h2>
+      <p>Puntos bonificados acumulados: {puntos * 2}</p>
     </div>
   );
 }
@@ -101,6 +103,7 @@ export default function Saludo() {
     * Puedes pasar de todo: textos, números, objetos o funciones.
 * **Ejemplo de código:**
 ```jsx
+// Componente hijo que recibe las propiedades 'texto' y 'color'
 function BotonAccion({ texto, color }) {
   return (
     <button style={{ backgroundColor: color, color: 'white', padding: '10px' }}>
@@ -108,11 +111,12 @@ function BotonAccion({ texto, color }) {
     </button>
   );
 }
+// Componente padre que utiliza BotonAccion con diferentes configuraciones
 export default function BarraHerramientas() {
   return (
     <div>
-      <BotonAccion texto="Guardar" color="green" />
-      <BotonAccion texto="Eliminar" color="red" />
+      <BotonAccion texto="Guardar cambios" color="green" />
+      <BotonAccion texto="Eliminar registro" color="red" />
     </div>
   );
 }
@@ -129,15 +133,15 @@ export default function BarraHerramientas() {
 ```jsx
 import { useState } from 'react';
 export default function ContadorMeGusta() {
-  // likes empieza en 0, y setLikes es la función para cambiarlo
+  // Declaración del estado: likes (valor actual) y setLikes (función actualizadora)
   const [likes, setLikes] = useState(0);
   function darLike() {
     setLikes(likes + 1);
   }
   return (
     <div>
-      <p>Total de likes: {likes}</p>
-      <button onClick={darLike}>Dar Me Gusta 👍</button>
+      <p>Total de reacciones: {likes}</p>
+      <button onClick={darLike}>Reaccionar 👍</button>
     </div>
   );
 }
@@ -152,7 +156,7 @@ Ejemplo de código:
 import { useState } from 'react';
 export default function EntradaTexto() {
   const [mensaje, setMensaje] = useState('');
-  // Captura lo que el usuario va escribiendo
+  // Función manejadora que extrae el texto ingresado
   function alEscribir(e) {
     setMensaje(e.target.value);
   }
@@ -160,10 +164,11 @@ export default function EntradaTexto() {
     <div>
       <input 
         type="text" 
-        placeholder="Escribe algo aquí..." 
+        placeholder="Escriba un texto..." 
+        value={mensaje}
         onChange={alEscribir} 
       />
-      <p>Estás escribiendo: {mensaje}</p>
+      <p>Contenido procesado: {mensaje}</p>
     </div>
   );
 }
@@ -189,23 +194,63 @@ Porque si buscas empleo de front-end en portales de trabajo (LinkedIn, Get on Bo
 
 
 ## Punto 5 · Grandes empresas que utilizan React
-### 1. Netflix
-* **En qué producto o sección lo usan:**
-En su plataforma web de streaming y sobre todo en la interfaz de sus aplicaciones para televisores inteligentes (Smart TVs y consolas).
-* **Por qué es un caso relevante:**
-Los televisores inteligentes suelen tener procesadores lentos y poca memoria comparados con un computador o celular moderno. Netflix aprovechó React para rehacer su pantalla de inicio, logrando que el catálogo cargue mucho más rápido y que navegar entre películas no se sienta trabado en pantallas lentas.
 
+### 1. Netflix
+
+**¿En qué producto o sección lo usan?**
+
+Netflix ha documentado el uso de React en el desarrollo de interfaces para televisores inteligentes (*Smart TVs*) y otros dispositivos de reproducción multimedia. Uno de los casos más conocidos es la creación de una interfaz optimizada para equipos con recursos de hardware limitados.
+
+**¿Por qué es un caso relevante?**
+
+Los televisores inteligentes pueden tener menos capacidad de procesamiento y memoria que un computador convencional. Por eso, desarrollar interfaces que respondan rápidamente y permitan navegar de forma fluida representa un desafío para los equipos de ingeniería.
+
+En un artículo técnico publicado en 2017, Netflix explicó cómo desarrolló una solución basada en React llamada **React-Gibbon**. Esta implementación utilizaba Gibbon, un motor gráfico propio, en lugar del DOM tradicional del navegador. Así, los desarrolladores podían construir la interfaz mediante componentes declarativos de React y utilizar un sistema de representación adaptado a las características de los dispositivos de televisión.
+
+Este caso demuestra que React permite organizar interfaces mediante componentes reutilizables y que su arquitectura puede adaptarse a entornos diferentes del navegador web tradicional.
+
+**Fuente:**
+
+- Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://netflixtechblog.com/crafting-a-high-performance-tv-user-interface-using-react-3350e5a65f3b).
 
 ### 2. Airbnb
-* **En qué producto o sección lo usan:**
-En toda su plataforma web para buscar alojamientos, ver fotos, revisar el mapa y reservar viajes.
-* **Por qué es un caso relevante:**
-Airbnb fue de las primeras empresas en apostarle fuerte a React para crear un sistema de diseño unificado. Gracias a esto, sus botones, tarjetas de casas y calendarios se ven y funcionan exactamente igual en cualquier idioma y país. Además, crearon la famosa "Guía de estilo de JavaScript y React de Airbnb", que hoy en día es una de las guías de buenas prácticas más famosas y seguidas por programadores en todo el mundo.
 
-fuentes bibliogragicas:
-1. **Documentación oficial de React:** https://es.react.dev
- y https://react.dev
-2. **Blog de ingeniería de Meta:** https://engineering.fb.com
-3. **Blog técnico de Netflix:** https://netflixtechblog.com
-4. **Blog de ingeniería de Airbnb:** https://medium.com/airbnb-engineering
-5. **Wikipedia en español:** Artículo "React (biblioteca informática)"
+**¿En qué producto o sección lo usan?**
+
+Airbnb ha documentado una reestructuración de su arquitectura frontend basada en tecnologías de JavaScript y React para desarrollar y mantener partes de su plataforma web. Su experiencia constituye un ejemplo de cómo organizar aplicaciones con interfaces complejas mediante componentes reutilizables.
+
+**¿Por qué es un caso relevante?**
+
+Una plataforma de alojamiento y viajes necesita ofrecer una experiencia coherente en diferentes secciones, como las búsquedas de propiedades, las fichas de alojamientos y los procesos de reserva. A medida que una aplicación crece, mantener el código organizado y facilitar la colaboración entre desarrolladores se vuelve cada vez más importante.
+
+El uso de React permite dividir la interfaz en componentes independientes que pueden reutilizarse y actualizarse con mayor facilidad. Airbnb también ha compartido con la comunidad herramientas y convenciones para mejorar la calidad del código, como su guía de estilo de JavaScript y sus recomendaciones específicas para React y JSX.
+
+Este caso es relevante porque muestra que el desarrollo de aplicaciones web de gran tamaño no depende únicamente de una biblioteca, sino también de una arquitectura organizada, componentes reutilizables y buenas prácticas de programación.
+
+**Fuentes:**
+
+- Airbnb Engineering. [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2).
+- Airbnb. [JavaScript Style Guide](https://github.com/airbnb/javascript).
+- Airbnb. [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
+
+---
+
+## Fuentes bibliográficas
+
+1. **React. Documentación oficial.** [Describing the UI](https://react.dev/learn/describing-the-ui). Consultada para estudiar qué es React, cómo se crean los componentes, cómo se utiliza JSX y cómo se pasan propiedades (*props*).
+
+2. **React. Documentación oficial.** [State: A Component's Memory](https://react.dev/learn/state-a-components-memory). Consultada para comprender el estado de los componentes, el funcionamiento de `useState` y la actualización de las interfaces.
+
+3. **React. Equipo de desarrollo.** [React Team](https://react.dev/community/team). Consultada para conocer el equipo y la comunidad que participan en el desarrollo y mantenimiento de React.
+
+4. **Netflix Technology Blog.** [Crafting a high-performance TV user interface using React](https://netflixtechblog.com/crafting-a-high-performance-tv-user-interface-using-react-3350e5a65f3b). Fuente técnica sobre React-Gibbon y la optimización de interfaces para dispositivos de televisión.
+
+5. **Airbnb Engineering.** [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2). Consultada para conocer la evolución de la arquitectura frontend de Airbnb y las decisiones técnicas relacionadas con su plataforma web.
+
+6. **Airbnb.** [JavaScript Style Guide](https://github.com/airbnb/javascript). Recurso sobre convenciones y buenas prácticas para escribir código JavaScript.
+
+7. **Airbnb.** [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react). Recurso con recomendaciones de estilo y organización para desarrollar componentes React y utilizar JSX.
+
+8. **Wikipedia.** [React](https://es.wikipedia.org/wiki/React). Fuente complementaria para contextualizar la historia y las características generales de React.
+
+Las fuentes anteriores se utilizaron como apoyo para elaborar las explicaciones de este trabajo con palabras propias.
