@@ -215,13 +215,12 @@ Este caso demuestra que React puede adaptarse a diferentes entornos de ejecució
 
 - Netflix Technology Blog. [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b).
 
-### 2. Airbnb
-
-**¿En qué producto o sección lo usan?**
+2. Airbnb
+¿En qué producto o sección lo usan?
 
 Airbnb ha compartido experiencias técnicas relacionadas con la arquitectura frontend de su plataforma web y el desarrollo de interfaces mediante componentes reutilizables.
 
-**¿Por qué es un caso relevante?**
+¿Por qué es un caso relevante?
 
 Una plataforma de alojamiento y viajes necesita mantener una experiencia coherente en diferentes secciones, como las búsquedas de propiedades, las fichas de alojamientos y los procesos de reserva. A medida que una aplicación crece, organizar el código y facilitar la colaboración entre desarrolladores se vuelve cada vez más importante.
 
@@ -229,30 +228,31 @@ React permite dividir una interfaz en componentes independientes que pueden reut
 
 Este caso permite comprender cómo los componentes reutilizables y las buenas prácticas de programación ayudan a organizar aplicaciones web complejas.
 
-**Fuentes:**
+Preview unavailable
 
-- Airbnb Engineering. [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5c213d25edb5).
-- Airbnb. [JavaScript Style Guide](https://github.com/airbnb/javascript).
-- Airbnb. [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
-
----
-
-## Fuentes bibliográficas
-
-1. **React. Documentación oficial.** [Describing the UI](https://react.dev/learn/describing-the-ui). Consultada para estudiar los componentes, JSX y la organización de las interfaces.
-
-2. **React. Documentación oficial.** [State: A Component's Memory](https://react.dev/learn/state-a-components-memory). Consultada para comprender el estado de los componentes y el funcionamiento de `useState`.
-
-3. **React. Equipo de desarrollo.** [React Team](https://react.dev/community/team). Consultada para conocer el equipo y la comunidad que participan en el desarrollo y mantenimiento de React.
-
-4. **Netflix Technology Blog.** [Crafting a high-performance TV user interface using React](https://medium.com/netflix-techblog/crafting-a-high-performance-tv-user-interface-using-react-3350e5a6ad3b). Fuente técnica sobre React-Gibbon y la optimización de interfaces para dispositivos de televisión.
-
-5. **Airbnb Engineering.** [Rearchitecting Airbnb’s Frontend](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5c213d25edb5). Fuente relacionada con la evolución de la arquitectura frontend de Airbnb.
-
-6. **Airbnb.** [JavaScript Style Guide](https://github.com/airbnb/javascript). Recurso sobre convenciones y buenas prácticas para escribir código JavaScript.
-
-7. **Airbnb.** [React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react). Recurso con recomendaciones de estilo para desarrollar componentes React y utilizar JSX.
-
-8. **Wikipedia.** [React](https://es.wikipedia.org/wiki/React). Fuente complementaria para contextualizar la historia y las características generales de React.
+Fuentes:
+Airbnb Engineering. Rearchitecting Airbnb’s Frontend (Archivo Web)
+.
+Airbnb. JavaScript Style Guide
+.
+Airbnb. React/JSX Style Guide
+.
+Fuentes bibliográficas
+React. Documentación oficial. Describing the UI
+. Consultada para estudiar los componentes, JSX y la organización de las interfaces.
+React. Documentación oficial. State: A Component's Memory
+. Consultada para comprender el estado de los componentes y el funcionamiento de useState.
+React. Equipo de desarrollo. React Team
+. Consultada para conocer el equipo y la comunidad que participan en el desarrollo y mantenimiento de React.
+Netflix Technology Blog. Crafting a high-performance TV user interface using React
+. Fuente técnica sobre React-Gibbon y la optimización de interfaces para dispositivos de televisión.
+Airbnb Engineering. Rearchitecting Airbnb’s Frontend (Archivo Web)
+. Fuente relacionada con la evolución de la arquitectura frontend de Airbnb.
+Airbnb. JavaScript Style Guide
+. Recurso sobre convenciones y buenas prácticas para escribir código JavaScript.
+Airbnb. React/JSX Style Guide
+. Recurso con recomendaciones de estilo para desarrollar componentes React y utilizar JSX.
+Wikipedia. React
+. Fuente complementaria para contextualizar la historia y las características generales de React.
 
 Las fuentes se utilizaron como apoyo para elaborar las explicaciones de este trabajo con palabras propias.
