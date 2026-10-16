@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%" style="background:#0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <text x="400" y="38" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">Paradigma Imperativo vs Paradigma Declarativo</text>
+
+  <!-- Lado Imperativo -->
+  <g transform="translate(40, 65)">
+    <rect width="330" height="230" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="165" y="30" text-anchor="middle" fill="#f87171" font-size="15" font-weight="bold">Imperativo (JS Tradicional a mano)</text>
+    <text x="165" y="55" text-anchor="middle" fill="#94a3b8" font-size="12">Se enfoca en CÓMO dar cada paso</text>
+
+    <g transform="translate(20, 75)" fill="#e2e8f0" font-size="12" font-family="monospace">
+      <rect width="290" height="28" rx="5" fill="#334155"/>
+      <text x="10" y="19" fill="#fca5a5">1. const btn = getElementById('btn')</text>
+      
+      <rect y="38" width="290" height="28" rx="5" fill="#334155"/>
+      <text x="10" y="57" fill="#fca5a5">2. btn.innerText = 'Cargando...'</text>
+      
+      <rect y="76" width="290" height="28" rx="5" fill="#334155"/>
+      <text x="10" y="95" fill="#fca5a5">3. btn.classList.add('activo')</text>
+      
+      <rect y="114" width="290" height="28" rx="5" fill="#334155"/>
+      <text x="10" y="133" fill="#fca5a5">4. parent.appendChild(nuevoDiv)</text>
+    </g>
+  </g>
+
+  <!-- Lado Declarativo -->
+  <g transform="translate(430, 65)">
+    <rect width="330" height="230" rx="12" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="165" y="30" text-anchor="middle" fill="#4ade80" font-size="15" font-weight="bold">Declarativo (React)</text>
+    <text x="165" y="55" text-anchor="middle" fill="#94a3b8" font-size="12">Se enfoca en QUÉ quieres ver en pantalla</text>
+
+    <g transform="translate(20, 75)" fill="#e2e8f0" font-size="12" font-family="monospace">
+      <rect width="290" height="35" rx="5" fill="#14532d" fill-opacity="0.4" stroke="#22c55e" stroke-width="1"/>
+      <text x="10" y="22" fill="#86efac">const [cargando, setCargando] = useState(true);</text>
+
+      <rect y="48" width="290" height="85" rx="5" fill="#334155"/>
+      <text x="10" y="70" fill="#93c5fd">&lt;button className={cargando ? 'activo' : ''}&gt;</text>
+      <text x="25" y="92" fill="#fef08a">{cargando ? 'Cargando...' : 'Listo'}</text>
+      <text x="10" y="114" fill="#93c5fd">&lt;/button&gt;</text>
+    </g>
+  </g>
+</svg>

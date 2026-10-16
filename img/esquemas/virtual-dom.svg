@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="100%" style="background:#0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="bold">¿Cómo sincroniza React la pantalla con el Virtual DOM?</text>
+
+  <!-- Paso 1 -->
+  <g transform="translate(40, 80)">
+    <rect width="200" height="220" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="200" height="40" rx="12" fill="url(#blueGrad)"/>
+    <text x="100" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">1. Estado Cambia</text>
+    <circle cx="100" cy="90" r="30" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="2"/>
+    <text x="100" y="95" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">useState</text>
+    <text x="100" y="150" text-anchor="middle" fill="#94a3b8" font-size="12">Se dispara un evento</text>
+    <text x="100" y="170" text-anchor="middle" fill="#94a3b8" font-size="12">(clic, texto, etc.)</text>
+    <text x="100" y="200" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">setLikes(likes + 1)</text>
+  </g>
+
+  <!-- Flecha 1 -->
+  <path d="M 255 190 L 285 190" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <polygon points="285,185 295,190 285,195" fill="#64748b"/>
+
+  <!-- Paso 2 -->
+  <g transform="translate(300, 80)">
+    <rect width="200" height="220" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="200" height="40" rx="12" fill="url(#purpleGrad)"/>
+    <text x="100" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">2. Virtual DOM (Diffing)</text>
+    <rect x="30" y="70" width="140" height="45" rx="6" fill="#334155"/>
+    <text x="100" y="96" text-anchor="middle" fill="#e2e8f0" font-size="12">Copia anterior</text>
+    <text x="100" y="132" text-anchor="middle" fill="#c084fc" font-size="16" font-weight="bold">VS</text>
+    <rect x="30" y="145" width="140" height="45" rx="6" fill="#7e22ce" fill-opacity="0.4" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="100" y="172" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Copia nueva en RAM</text>
+  </g>
+
+  <!-- Flecha 2 -->
+  <polygon points="545,185 555,190 545,195" fill="#64748b"/>
+  <path d="M 515 190 L 545 190" stroke="#64748b" stroke-width="3"/>
+
+  <!-- Paso 3 -->
+  <g transform="translate(560, 80)">
+    <rect width="200" height="220" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="200" height="40" rx="12" fill="url(#greenGrad)"/>
+    <text x="100" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">3. DOM Real (Navegador)</text>
+    <circle cx="100" cy="95" r="26" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="2"/>
+    <text x="100" y="100" text-anchor="middle" fill="#4ade80" font-size="18">⚡</text>
+    <text x="100" y="150" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="bold">Actualización precisa</text>
+    <text x="100" y="175" text-anchor="middle" fill="#94a3b8" font-size="12">Solo cambia el número</text>
+    <text x="100" y="195" text-anchor="middle" fill="#4ade80" font-size="12">¡Sin recargar la página!</text>
+  </g>
+</svg>
